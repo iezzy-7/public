@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directorate 2 Messaging</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="sidebar">
+        <h2>Directorate 2</h2>
+        <ul id="recipientList">
+            <li class="recipient" id="directorate1" onclick="setRecipient('Directorate 1')">Directorate 1</li>
+            <li class="recipient" id="directorate3" onclick="setRecipient('Directorate 3')">Directorate 3</li>
+            <li class="recipient" id="directorate5" onclick="setRecipient('Directorate 4')">Directorate 4</li>
+            <li class="recipient" id="directorate5" onclick="setRecipient('Directorate 5')">Directorate 5</li>
+        </ul>
+        <p id="selectedRecipient">Selected Recipient: None</p>
+    </div>
+    <div class="messageArea">
+        <h2>Messages for Directorate 2</h2>
+        <p id="recipientDisplay">Recipient: None</p>
+        <div class="messages" id="messagesList"></div>
+        <div class="messageInput" id="messageInputArea">
+            <div class="chatMessageInputContainer">
+                <textarea id="message" rows="2" placeholder="Type your message here..." oninput="autoResizeTextarea()"></textarea>
+                <input type="file" id="fileInput" accept=".doc,.docx,.pdf" />
+                <button onclick="sendMessage('Directorate 2')">Send</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
